@@ -9,6 +9,12 @@ variable "ami_name_prefix" {
   description = "The prefix string that will be used for the name tags of the resulting AMI and snapshot(s); the version string will be appended automatically"
 }
 
+variable "ami_regions" {
+  type        = list(string)
+  default     = ["eu-west-2"]
+  description = "A list of AWS regions that the AMI will be made available in"
+}
+
 variable "aws_instance_type" {
   type        = string
   default     = "t3.medium"

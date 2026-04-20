@@ -1,5 +1,6 @@
 source "amazon-ebs" "builder" {
   ami_name                  = "${var.ami_name_prefix}-${var.version}"
+  ami_regions               = var.ami_regions
   ami_users                 = var.ami_account_ids
   communicator              = "ssh"
   force_delete_snapshot     = var.force_delete_snapshot

@@ -12,4 +12,11 @@ build {
       "-e", "ssh_username=${var.ssh_username}"
     ]
   }
+
+  provisioner "shell" {
+    inline = [
+      "sudo find /root /home -name authorized_keys -delete",
+      "sudo find /root /home -name '.*history' -delete"
+    ]
+  }
 }
