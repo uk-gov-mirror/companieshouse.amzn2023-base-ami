@@ -23,8 +23,9 @@ amzn2023cis_rule_4_6_1_5: false
 # Disable rootpw check as the Amazon-sourced AMI has no default password
 amzn2023cis_rule_4_6_6: false
 
-clamav_mirror: http://clamav-mirror.sharedservices.aws.internal
-
 required_packages:
   - git
   - htop
+
+## clamav_ng Variables
+clamav_ng_freshclam_privatemirror: clamav-mirror.companieshouse.gov.uk
